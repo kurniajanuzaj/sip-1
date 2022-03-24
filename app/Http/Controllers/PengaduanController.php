@@ -24,10 +24,7 @@ class PengaduanController extends Controller
                 ->latest()->paginate(10);
         } else {
             $pengaduan = Pengaduan::where('user_id', Auth::id())
-                ->Where([
-                        'status' => 'complete',
-                        'status' => 'spam'
-                    ])
+                ->whereNotIn('status', ['process'])
                 ->latest()->paginate(10);
         }
         
