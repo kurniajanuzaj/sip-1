@@ -14,15 +14,21 @@
                             <span>{{ $pengaduan->no_aduan }} / {{ $pengaduan->tanggal }}</span>
                             <h3>{{$pengaduan->isi_laporan}}</h3>
                             @if (Auth::user()->role == 'admin')
-                            <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal"
-                                data-target="#exampleModal">{{ $pengaduan->status }}</button>
+                                @if ($pengaduan->status == 'process')
+                                <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal"
+                                    data-target="#exampleModal">{{ $pengaduan->status }}</button>
+                                @else
+                                <button type="button"
+                                    class="btn btn-sm btn-outline-primary">{{ $pengaduan->status }}</button>
+                                @endif
                             @else
-                            <button type="button" class="btn btn-sm btn-outline-primary">{{ $pengaduan->status }}</button>
+                            <button type="button"
+                                class="btn btn-sm btn-outline-primary">{{ $pengaduan->status }}</button>
                             @endif
                         </div>
                         <div class="col-lg-4">
-                            <img src="{{ asset($pengaduan->foto) }}" class="rounded float-right responsive" alt="Lampiran"
-                                width="500pz">
+                            <img src="{{ asset($pengaduan->foto) }}" class="rounded float-right responsive"
+                                alt="Lampiran" width="500pz">
                         </div>
                     </div>
                 </div>
@@ -43,7 +49,8 @@
                                 <input type="text" name="pengaduan_id" value="{{$pengaduan->id}}" hidden>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Tanggapan Laporan</label>
-                                    <textarea class="form-control @error('isi_laporan') is-invalid @enderror" rows="3" name="isi_laporan"></textarea>
+                                    <textarea class="form-control @error('isi_laporan') is-invalid @enderror" rows="3"
+                                        name="isi_laporan"></textarea>
                                     @error('isi_laporan')
                                     <span class="invalid-pengaduan" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -106,5 +113,5 @@
             @endif
         </div>
     </div>
-<div>
-@endsection
+    <div>
+        @endsection
