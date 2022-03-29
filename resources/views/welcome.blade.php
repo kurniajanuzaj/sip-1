@@ -51,6 +51,7 @@
                     <li><a class="nav-link scrollto active" href="{{ url('/home') }}">Home</a></li>
                     @else
                     <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
+                    <li><a class="getstarted scrollto" href="{{ route('login') }}">Register</a></li>
                     @endauth
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
