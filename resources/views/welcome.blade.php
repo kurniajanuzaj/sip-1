@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="{{ route('pengaduan.index') }}" class="btn-get-started scrollto">LAPOR</a>
+                <a href="#" class="btn-get-started scrollto">SIPELA</a>
             </div>
 
             {{-- <div class="row icon-boxes">
