@@ -50,8 +50,8 @@
                     @auth
                     <li><a class="nav-link scrollto active" href="{{ url('/home') }}">Home</a></li>
                     @else
+                    {{-- <li><a class="nav-link scrollto active" href="{{ url('/register') }}">Register</a></li> --}}
                     <li><a class="getstarted scrollto" href="{{ route('login') }}">Login</a></li>
-                    <li><a class="getstarted scrollto" href="{{ route('login') }}">Register</a></li>
                     @endauth
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -70,7 +70,11 @@
                 </div>
             </div>
             <div class="text-center">
-                {{-- <a href="#" class="btn-get-started scrollto">SIPELA</a> --}}
+                @auth
+                <a href="#" class="btn-get-started scrollto">SIPELA</a>
+                @else
+                <a href="{{route('register')}}" class="btn-get-started scrollto">REGISTER</a>
+                @endauth
             </div>
 
             {{-- <div class="row icon-boxes">
