@@ -42,12 +42,12 @@
                         @if (Auth::user()->role == 'user')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('pengaduan.index') }}">
-                                {{('Laporan Warga') }}
+                                {{('LAPOR!!') }}
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('pengaduan.finsih') }}">
-                                {{('Laporan Selesai') }}
+                                {{('Status Laporan') }}
                             </a>
                         </li>
                         @elseif (Auth::user()->role == 'admin')
@@ -58,7 +58,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('pengaduan.finsih') }}">
-                                {{('Laporan Selesai') }}
+                                {{('Status Laporan') }}
                             </a>
                         </li>
                         <li class="nav-item">
@@ -67,7 +67,7 @@
                             </a>
                         </li>
                         @endif
-                        
+
                         @endguest
                     </ul>
 

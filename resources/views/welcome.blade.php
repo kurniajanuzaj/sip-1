@@ -73,7 +73,7 @@
                 @auth
                 <a href="#" class="btn-get-started scrollto">SIPELA</a>
                 @else
-                <a href="{{route('register')}}" class="btn-get-started scrollto">REGISTER</a>
+                <a href="{{route('register')}}" class="btn-get-started scrollto">LAPOR!!</a>
                 @endauth
             </div>
 
@@ -124,7 +124,7 @@
                     <h2>About Us</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. </p>
                 </div>
-                {{-- 
+                {{--
         <div class="row content">
           <div class="col-lg-6">
             <p>
